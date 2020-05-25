@@ -11,8 +11,9 @@ ENV PYTHONUNBUFFERED 1
 # RUN pip3 install --upgrade pip
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3 get-pip.py
+RUN pip3 install rasa
 COPY ./requirements.txt /usr/src/app/requirements.txt
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # copy project
 COPY . /usr/src/app/

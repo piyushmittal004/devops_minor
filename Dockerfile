@@ -8,7 +8,9 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # install dependencies
-RUN pip3 install --upgrade pip
+# RUN pip3 install --upgrade pip
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+RUN python3 get-pip.py
 COPY ./requirements.txt /usr/src/app/requirements.txt
 RUN pip3 install -r requirements.txt
 

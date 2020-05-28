@@ -1,4 +1,4 @@
-FROM python:3
+FROM tensorflow/tensorflow:1.14.0-py3
 
 # set work directory
 WORKDIR /usr/src/app

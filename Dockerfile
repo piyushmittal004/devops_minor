@@ -12,6 +12,7 @@ RUN pip3 install --upgrade pip
 #RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 #RUN python3 get-pip.py
 #RUN pip3 install rasa
+RUN ["apt-get", "install", "-y", "libsm6", "libxext6", "libxrender-dev"]
 COPY ./requirements.txt /usr/src/app/requirements.txt
 RUN pip3 install -r requirements.txt
 

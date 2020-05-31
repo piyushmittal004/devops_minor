@@ -1,0 +1,56 @@
+2020-05-30 14:13:55,526 WARNING  [log.py:228] Not Found: /favicon.ico
+2020-05-30 14:14:18,564 WARNING  [deprecation_wrapper.py:119] From /home/piyush/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-05-30 14:14:24,6 WARNING  [deprecation_wrapper.py:119] From /home/piyush/.local/lib/python3.6/site-packages/imageai/Detection/keras_retinanet/backend/tensorflow_backend.py:22: The name tf.image.resize_images is deprecated. Please use tf.image.resize instead.
+
+2020-05-30 14:14:26,152 WARNING  [deprecation.py:323] From /home/piyush/.local/lib/python3.6/site-packages/imageai/Detection/keras_retinanet/backend/tensorflow_backend.py:46: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-30 14:14:41,405 WARNING  [deprecation_wrapper.py:119] From /home/piyush/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-05-30 14:15:04,358 ERROR    [log.py:228] Internal Server Error: /runCode
+Traceback (most recent call last):
+  File "/home/piyush/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/piyush/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/piyush/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/piyush/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/piyush/Downloads/devops_minor/ObjectDetectionApp/views.py", line 29, in objectDetectionAlgo
+    logging.info("Successfully running the algo  %s" % status.HTTP_201_CREATED)
+NameError: name 'status' is not defined
+2020-05-30 14:16:05,563 INFO     [autoreload.py:222] /home/piyush/Downloads/devops_minor/ObjectDetectionApp/views.py changed, reloading.
+2020-05-30 14:17:38,715 WARNING  [deprecation_wrapper.py:119] From /home/piyush/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-05-30 14:17:43,525 WARNING  [deprecation_wrapper.py:119] From /home/piyush/.local/lib/python3.6/site-packages/imageai/Detection/keras_retinanet/backend/tensorflow_backend.py:22: The name tf.image.resize_images is deprecated. Please use tf.image.resize instead.
+
+2020-05-30 14:17:45,733 WARNING  [deprecation.py:323] From /home/piyush/.local/lib/python3.6/site-packages/imageai/Detection/keras_retinanet/backend/tensorflow_backend.py:46: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-30 14:17:59,477 WARNING  [deprecation_wrapper.py:119] From /home/piyush/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-05-30 14:18:21,660 INFO     [views.py:29] Successfully running the algo 
+2020-05-30 14:18:22,576 INFO     [views.py:65] Successfully fetched the image 
+2020-05-31 06:05:22,506 WARNING  [deprecation_wrapper.py:119] From /home/piyush/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-05-31 06:05:27,321 WARNING  [deprecation_wrapper.py:119] From /home/piyush/.local/lib/python3.6/site-packages/imageai/Detection/keras_retinanet/backend/tensorflow_backend.py:22: The name tf.image.resize_images is deprecated. Please use tf.image.resize instead.
+
+2020-05-31 06:05:30,807 WARNING  [deprecation.py:323] From /home/piyush/.local/lib/python3.6/site-packages/imageai/Detection/keras_retinanet/backend/tensorflow_backend.py:46: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-31 06:05:41,858 WARNING  [deprecation_wrapper.py:119] From /home/piyush/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-05-31 06:06:04,63 INFO     [views.py:28] Successfully uploaded
+2020-05-31 06:06:04,902 INFO     [views.py:64] PROCESSING IMAGE
+2020-05-31 06:13:21,797 INFO     [views.py:28] Successfully uploaded
+2020-05-31 06:13:22,328 INFO     [views.py:64] PROCESSING IMAGE
+2020-05-31 06:16:36,845 INFO     [views.py:28] Successfully uploaded
+2020-05-31 06:16:38,86 INFO     [views.py:64] PROCESSING IMAGE
+2020-05-31 06:29:10,415 INFO     [views.py:28] Successfully uploaded
+2020-05-31 06:29:10,924 INFO     [views.py:64] PROCESSING IMAGE
+2020-05-31 06:45:09,280 INFO     [views.py:28] Successfully uploaded
+2020-05-31 06:45:09,744 INFO     [views.py:64] PROCESSING IMAGE
+2020-05-31 06:57:39,984 INFO     [views.py:28] Successfully uploaded
+2020-05-31 06:57:40,438 INFO     [views.py:64] PROCESSING IMAGE

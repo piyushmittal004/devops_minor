@@ -3,6 +3,12 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 import base64
 import os
+
+import logging
+logging.basicConfig(filename='myproject.log',format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    level=logging.INFO)
+
 # Create your views here.
 
 @csrf_exempt
@@ -19,7 +25,7 @@ def objectDetectionAlgo(request):
 
     path = 'image.jpeg'
     objectDetectionAlgoInternal(path)
-
+    logging.info("Successfully uploaded")
     return HttpResponse('Success', content_type="text/plain")
 
 def objectDetectionAlgoInternal(path):
@@ -55,5 +61,5 @@ def getCode(request):
     os.remove('image.jpeg')  # deleting files
     os.remove('imageNew.jpeg')  # deleting files
     os.remove('imageTemp.jpeg')  # deleting files
-
+    logging.info("PROCESSING IMAGE")
     return HttpResponse(encoded_string, content_type="text/plain")

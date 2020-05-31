@@ -1,33 +1,31 @@
 from selenium import webdriver
-from budget.models import project
-from django.contrib.staticfiles.testing import StaticLiveServerTestCase
-from django.urls import reverse
 import time
+import os
 
-class TestProjectListPage(StaticLiveServerTestCase):
-	def setUp(self):
-		self.browser=webdriver.Chrome('functional_tests/chromedriver')
+driver = webdriver.Chrome(executable_path="functional_tests/chromedriver")
 
-	def tearDown(self):
-		self.browser,close()
+driver.get('http://127.0.0.1:8000/')
 
-	def Object_Detection_in_Images_is_displayed_correctly(self):
-		self.browser.get(live_server_url)
-		alert=self.browser.find_element_by_class_name('write the class name')
-		self.assertequals(
-			alert.find_element_by_tag_name('h2').text,
-			'Object Detection in Images'			
-	
-	
-		)
+assert (print(driver.title), 'Object Detection | Images')
+assert (print(driver.current_url), 'http://127.0.0.1:8000/')
 
-	def test_run_button(self):
-		self.browser.get(live_server_url)
-		next_url=self.live_server_url+reverse('//write page here')
-		self.browser.find_element_by_tag_name('a').click()
-		self.assertEquals(
-			self.browser.current_url,
-			add_url
-		)
+execution_path = os.getcwd()
 
+driver.find_element_by_id('file_upload').send_keys(os.path.join(execution_path, "functional_tests/Image1.jpeg"))
+time.sleep(5)
 
+driver.find_element_by_id('clear').click()
+time.sleep(5)
+
+driver.find_element_by_id('file_upload').send_keys(os.path.join(execution_path, "functional_tests/Image1.jpeg"))
+time.sleep(5)
+
+driver.find_element_by_id('file_upload').send_keys(os.path.join(execution_path, "functional_tests/Image2.jpeg"))
+time.sleep(5)
+
+driver.find_element_by_id('run').click()
+assert (driver.current_url, 'http://127.0.0.1:8000/result')
+
+time.sleep(70)
+
+driver.close()
